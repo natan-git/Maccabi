@@ -1,0 +1,290 @@
+:root {
+  --dark-blue: #0d47a1;
+  --blue: #007bff;
+  --pink: #d625a1;
+  --text-color: rgb(90, 85, 85);
+  --l-text: 4rem;
+  --m-text: 2.75rem;
+  --s-text: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* * {
+  outline: 1px solid red !important;
+} */
+* {
+  margin: 0;
+}
+body {
+  font-family: "Heebo", sans-serif;
+  font-size: 1rem;
+  text-align: right;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: var(--l-text);
+  font-weight: 500;
+  line-height: 120%;
+}
+h2 {
+  font-size: var(--m-text);
+}
+p {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.75rem;
+    font-weight: 500;
+    line-height: 120%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+@media (max-width: 768px) {
+.container {
+  padding: 0rem 1.25rem;
+}
+}
+
+/*----------------------------- hero-----------------------------*/
+
+.hero {
+  background-image: url(/assets/Group.png);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+.hero-wrapper {
+  display: block;
+}
+
+/* columns */
+.hero-wrapper > * {
+  padding: 1rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 768px) {
+  .hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+  .box.left img{
+    width: 80%;
+  }
+.box.right {
+  display: flex;
+  align-items: center;
+}
+
+.box.right h1 span {
+  color: var(--pink);
+  font-weight: 400;
+}
+.box.right h1 {
+  color: var(--dark-blue);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+  .box.right{
+    padding: 0px;
+  }
+  .box.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box.left img{
+    width: 80%;
+  }
+}
+
+/* greet text */
+.greet {
+  padding: 6rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.greet-text {
+  padding-bottom: 2rem;
+  font-size: 1.75rem;
+  color: var(--text-color);
+  line-height: 120%;
+  text-align: right;
+  padding-left: 15vw;
+}
+@media (max-width: 768px) {
+  .greet-text {
+    font-size: 1.25rem;
+  padding-left: 0vw;
+  }
+}
+
+/* cards */
+.cards{
+  position: relative;
+}
+
+.blob-1{
+  position: absolute;
+  right: 0px;
+  top: -100px;
+  z-index: -1;
+  width: 120px;
+}
+.blob-2{
+  position: absolute;
+  left: 0px;
+  top: 500px;
+  z-index: -1;
+  width: 150px;
+}
+.blob-3{
+  position: absolute;
+  right: 0px;
+  bottom: 100px;
+  z-index: -1;
+  width: 230px;
+}
+
+.card {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 8rem;
+}
+.card h2 {
+  color: var(--dark-blue);
+  line-height: 120%;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.card p {
+  text-align: right;
+  max-width: 500px;
+  color: var(--text-color);
+  line-height: 160%;
+  margin-bottom: 1.25rem;
+}
+
+
+.card span {
+  color: var(--dark-blue);
+  font-weight: 500;
+  display: inline-block;
+  padding-bottom: 0.75rem;
+}
+@media (max-width: 768px) {
+  .card span {
+    padding-bottom: 0rem;
+  }
+}
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  font-size: 1.25rem;
+  color: white;
+  background-color: var(--pink);
+  border-radius: 999px;
+  border-style: none;
+}
+
+footer {
+  padding: 4rem 0rem;
+  background: rgb(37,68,177);
+  background: -moz-linear-gradient(90deg, rgba(37,68,177,1) 0%, rgba(0,123,255,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(37,68,177,1) 0%, rgba(0,123,255,1) 100%);
+  background: linear-gradient(90deg, rgba(37,68,177,1) 0%, rgba(0,123,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2544b1",endColorstr="#007bff",GradientType=1);
+}
+
+
+footer .icons{
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+}
+
+footer .menu{
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem 2rem 0rem;
+
+}
+
+footer .menu a{
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+} 
+
+@media (max-width: 768px) {
+  footer .menu{
+    flex-direction: column-reverse;
+  }
+  footer .icons img{
+    width: 40px;
+  }
+}
+
+
